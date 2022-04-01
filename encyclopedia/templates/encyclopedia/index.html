@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    Encyclopedia
+{% endblock %}
+
+{% block body %}
+    <h1>{{ title }}</h1>
+
+    <ul>
+        {% for entry in entries %}
+            <a href="/wiki/{{ entry }}">{{ entry }}</a><br>
+            
+        {% endfor %}
+    </ul>
+
+{% endblock %}
+
+                <!-- <div>
+                    <a href="{% url 'entry' %}">Entry</a>
+                </div> -->
